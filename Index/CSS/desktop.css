@@ -1,0 +1,14 @@
+body
+{
+  background-color: #07cafa;
+  font-family: 'Dosis', sans-serif;
+}
+.container
+{
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 1000px;
+  border: 1px solid black;
+}
