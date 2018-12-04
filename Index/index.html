@@ -8,7 +8,10 @@
       <link
          href="https://fonts.googleapis.com/css?family=Dosis"
          rel="stylesheet">
-      <script src="../javascript/pagechange.js" charset="utf-8"></script>
+      <script
+         type="text/javascript"
+         src="../index/javascript/pagechange.js"
+         charset="utf-8"></script>
       <meta charset="utf-8">
       <title>Calculations</title>
    </head>
@@ -17,69 +20,44 @@
          <h2>MATHS KEK</h2>
       </div>
       <div class="topbar">
-         <ul>
-            <li>
-               <a href="#Calculator">
-                  <button
-                     class="tablink"
-                     onclick="openSite(event, 'Calculator')">Calculator</button>
-               </a>
-            </li>
-            <li>
-               <a href="#ConTable">
-                  <button
-                     class="tablink"
-                     onclick="openSite(event, 'ConTable')">Conversion Table</button>
-               </a>
-            </li>
-            <li>
-               <a href="#Combinations">
-                  <button
-                     class="tablink"
-                     onclick="openSite(event, 'Combinations')">Combinations</button>
-               </a>
-            </li>
-            <li>
-               <a href="#TruthTables">
-                  <button
-                     class="tablink"
-                     onclick="openSite(event, 'TruthTables')">Truth Tables</button>
-               </a>
-            </li>
-            <li>
-               <a href="#RNG">
-                  <button class="tablink" onclick="openSite(event, 'RNG')">Random Values</button>
-               </a>
-            </li>
-            <li>
-               <a href="#Optional">
-                  <button
-                     class="tablink"
-                     onclick="openSite(event, 'Optional')">Optional</a>
-               </li>
-            </ul>
-         </div>
-         <div class="container">
-            <div class="column">
-               <div id="Calculator" class="tabcolumn">
-                  <h1>HERE COMES BIG CALCULATOR</h1>
-               </div>
-               <div id="ConTable" class="tabcolumn">
-                  <h1>HERE CONVERSION TABLE</h1>
-               </div>
-               <div id="Combinations" class="tabcolumn">
-                  <h1>HERE COMES COMBINATIONS</h1>
-               </div>
-               <div id="TruthTables" class="tabcolumn">
-                  <h1>HERE COMES TRUTH TABLES</h1>
-               </div>
-               <div id="RNG" class="tabcolumn">
-                  <h1>HERE COMES ALOT OF RNG/h1>
-                  </div>
-                  <div id="Optional" class="tabcolumn">
-                     <h1>HERE COMES OR NOT OPTIONAL</h1>
-                  </div>
-               </div>
+         <button
+            class="tablink"
+            onclick="openSite(event, 'Calculator')">Calculator</button>
+         <button
+            class="tablink"
+            onclick="openSite(event, 'ConTable')">Conversion Table</button>
+         <button
+            class="tablink"
+            onclick="openSite(event, 'Combinations')">Combinations</button>
+         <button
+            class="tablink"
+            onclick="openSite(event, 'TruthTables')">Truth Tables</button>
+         <button class="tablink" onclick="openSite(event, 'RNG')">Random Values</button>
+         <button
+            class="tablink"
+            onclick="openSite(event, 'Optional')">Optional</button>
+      </div>
+      <div class="container">
+         <div class="column">
+            <div id="Calculator" class="tabcolumn">
+               <h1>HERE COMES BIG CALCULATOR</h1>
             </div>
-         </body>
-      </html>
+            <div id="ConTable" class="tabcolumn">
+               <h1>HERE CONVERSION TABLE</h1>
+            </div>
+            <div id="Combinations" class="tabcolumn">
+               <h1>HERE COMES COMBINATIONS</h1>
+            </div>
+            <div id="TruthTables" class="tabcolumn">
+               <h1>HERE COMES TRUTH TABLES</h1>
+            </div>
+            <div id="RNG" class="tabcolumn">
+               <h1>HERE COMES ALOT OF RNG</h1>
+            </div>
+            <div id="Optional" class="tabcolumn">
+               <h1>HERE COMES OR NOT OPTIONAL</h1>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

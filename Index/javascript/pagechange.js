@@ -1,4 +1,5 @@
-function openSite(evt, tabName) {
+  function openSite(evt, tabName) {
+    console.log('hi');
     var i, tabcolumn, tablink;
     tabcolumn = document.getElementsByClassName("tabcolumn");
     for (i = 0; i < tabcolumn.length; i++) {
@@ -8,6 +9,6 @@ function openSite(evt, tabName) {
     for (i = 0; i < tablink.length; i++) {
         tablink[i].className = tablink[i].className.replace(" active", "");
     }
-    document.getElementById(tabName).style.display = "block";
+    document.getElementById(tabName).style.display = "flex";
     evt.currentTarget.className += " active";
-}
+};
