@@ -115,7 +115,7 @@ body
   justify-content: center;
   padding-top: 40px;
 }
-.inputfieldOCT, .inputfieldBIN, .inputfieldHEX, .inputfieldDEC, input
+#inputfieldOCT, #inputfieldBIN, #inputfieldHEX, #inputfieldDEC, input
 {
   width: 200px;
   height: 30px;
@@ -154,4 +154,19 @@ body
 .calcButtons button:active
 {
   color: #211513;
+}
+.calcChange
+{
+  display: none;
+}
+.footer
+{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #db0303;
+  height: auto;
+  text-align: center;
+  font-size: 15px;
 }

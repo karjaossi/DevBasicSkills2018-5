@@ -16,12 +16,12 @@ function calcMode(evt, calcName){
   var i, calcChange, calcButton;
   calcChange = document.getElementsByClassName("calcChange");
   for (i = 0; i < calcChange.length; i++) {
-      calcchange[i].style.display = "none";
+      calcChange[i].style.display = "none";
   }
   calcButton = document.getElementsByClassName("calcButton");
   for (i = 0; i < calcButton.length; i++) {
       calcButton[i].className = calcButton[i].className.replace(" active", "");
   }
-  document.getElementById(calcChange).style.display = "flex";
+  document.getElementById(calcName).style.display = "flex";
   evt.currentTarget.className += " active";
-} //With this one you can pick up the right converter for your needs
+}; //With this one you can pick up the right converter for your needs
