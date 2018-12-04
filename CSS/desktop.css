@@ -1,8 +1,8 @@
 body
 {
-  background-color: #7CBBCB;
+  background-color: #AA4C39;
   font-family: 'Dosis', sans-serif;
-  color: #19141B;
+  color: #211513;
 }
 .header
 {
@@ -14,8 +14,9 @@ body
 }
 .header h2
 {
+  color: #dedede;
   margin: 1px;
-  text-shadow: 2px 2px 5px white;
+  text-shadow: 2px 2px 5px #A7260B;
 }
 .topbar
 {
@@ -23,26 +24,35 @@ body
   width: 50%;
   height: auto;
   justify-content: center;
-  background-color: #2673A2;
   margin-left: auto;
   margin-right: auto;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  padding-bottom: 8px;
 }
 .topbar button
 {
-
 	background: none;
-	color: inherit;
+  background-color: rgba(0, 0, 0, 0.13);
+	color: #dedede;
 	border: none;
-	padding: 2px;
-	font: inherit;
+	padding-left: 8px;
+  padding-right: 8px;
+  font-size: 20px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-family:inherit;
 	cursor: pointer;
 	outline: inherit;
+  overflow: hidden;
+  border-radius: 20px;
+  text-shadow: 2px 2px 3px #211513;
 }
 .topbar button:hover
 {
   color: white;
+}
+.topbar button:active
+{
+  color: yellow;
 }
 .container
 {
@@ -53,14 +63,95 @@ body
   margin-right: auto;
   width: 70%;
   height: 700px;
-  background-color: #2673A2;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  background-color: #dedede;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border: 2px solid #db0303;
 }
 .tabcolumn
 {
   display: none;
   padding: 6px 12px;
-  -webkit-animation: fadeEffect 1s;
-  animation: fadeEffect 1s;
+  -webkit-animation: fadeEffect 0.5s;
+  animation: fadeEffect 0.5s;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
+}
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.valueoutputBIN, .valueoutputOCT, .valueoutputHEX, .valueoutputDEC
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.valuedec
+{
+  font-size: 15px;
+}
+.values
+{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+}
+.inputfields
+{
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+.inputfieldOCT, .inputfieldBIN, .inputfieldHEX, .inputfieldDEC, input
+{
+  width: 200px;
+  height: 30px;
+  font-size: 25px;
+  text-align: right;
+}
+.calcButtons
+{
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  margin-top: 15px;
+}
+.calcButtons button
+{
+  background: none;
+  color: #211513;
+  border: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 18px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-family:inherit;
+  cursor: pointer;
+  outline: inherit;
+  overflow: hidden;
+  border-radius: 20px;
+  text-shadow: 2px 2px 3px #dedede;
+}
+.calcButtons button:hover
+{
+  color: #dedede;
+  text-shadow: 1px 1px 5px black;
+}
+.calcButtons button:active
+{
+  color: #211513;
 }

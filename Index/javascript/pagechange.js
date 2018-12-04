@@ -1,5 +1,4 @@
   function openSite(evt, tabName) {
-    console.log('hi');
     var i, tabcolumn, tablink;
     tabcolumn = document.getElementsByClassName("tabcolumn");
     for (i = 0; i < tabcolumn.length; i++) {
@@ -11,4 +10,18 @@
     }
     document.getElementById(tabName).style.display = "flex";
     evt.currentTarget.className += " active";
-};
+}; // This javascript will change the tabs on the same page.
+
+function calcMode(evt, calcName){
+  var i, calcChange, calcButton;
+  calcChange = document.getElementsByClassName("calcChange");
+  for (i = 0; i < calcChange.length; i++) {
+      calcchange[i].style.display = "none";
+  }
+  calcButton = document.getElementsByClassName("calcButton");
+  for (i = 0; i < calcButton.length; i++) {
+      calcButton[i].className = calcButton[i].className.replace(" active", "");
+  }
+  document.getElementById(calcChange).style.display = "flex";
+  evt.currentTarget.className += " active";
+} //With this one you can pick up the right converter for your needs

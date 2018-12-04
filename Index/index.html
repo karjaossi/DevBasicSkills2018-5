@@ -12,6 +12,10 @@
          type="text/javascript"
          src="../index/javascript/pagechange.js"
          charset="utf-8"></script>
+      <script
+         type="text/javascript"
+         src="../index/javascript/Calculator.js"
+         charset="utf-8"></script>
       <meta charset="utf-8">
       <title>Calculations</title>
    </head>
@@ -40,7 +44,60 @@
       <div class="container">
          <div class="column">
             <div id="Calculator" class="tabcolumn">
-               <h1>HERE COMES BIG CALCULATOR</h1>
+               <div class="values">
+                  <div class="valueoutputBIN">
+                     <output name="resultConversion">placeholder</output>
+                     <div class="valuedec">
+                        <p>BIN</p>
+                     </div>
+                  </div>
+                  <div class="valueoutputHEX">
+                     <output name="resultConversion">placeholder</output>
+                     <div class="valuedec">
+                        <p>HEX</p>
+                     </div>
+                  </div>
+                  <div class="valueoutputDEC">
+                     <output name="resultConversion">placeholder</output>
+                     <div class="valuedec">
+                        <p>DEC</p>
+                     </div>
+                  </div>
+                  <div class="valueoutputOCT">
+                     <output name="resultConversion">placeholder</output>
+                     <div class="valuedec">
+                        <p>OCT</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="inputfields">
+
+
+               <div id="calcChange" class="inputfieldBIN">
+                  <input type="number" name="inputfield" placeholder="BINARY">
+               </div>
+               <div id="calcChange" class="inputfieldHEX">
+                  <input
+                     type="text"
+                     name="inputfield"
+                     placeholder="HEXADECIMAL">
+               </div>
+               <div id="calcChange" class="inputfieldDEC">
+                  <input
+                     type="number"
+                     name="inputfield"
+                     placeholder="DECIMAL">
+               </div>
+               <div id="calcChange" class="inputfieldOCT">
+                  <input type="number" name="inputfield" placeholder="OCTAL">
+               </div>
+               </div>
+               <div class="calcButtons">
+                  <button class="calcButton" onclick="calcMode(event, 'inputfieldBIN')">BINARY</button>
+                  <button class="calcButton" onclick="calcMode(event, 'inputfieldHEX')">HEXADECIMAL</button>
+                  <button class="calcButton" onclick="calcMode(event, 'inputfieldDEC')">DECIMAL</button>
+                  <button class="calcButton" onclick="calcMode(event, 'inputfieldOCT')">OCTAL</button>
+               </div>
             </div>
             <div id="ConTable" class="tabcolumn">
                <h1>HERE CONVERSION TABLE</h1>
