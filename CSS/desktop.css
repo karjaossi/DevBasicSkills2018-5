@@ -113,14 +113,21 @@ body
 {
   display: flex;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 15px;
 }
 #inputfieldOCT, #inputfieldBIN, #inputfieldHEX, #inputfieldDEC, input
 {
-  width: 200px;
+  width: 300px;
   height: 30px;
   font-size: 25px;
-  text-align: right;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  background-color: #dedede;
+}
+#inputfieldOCT, #inputfieldBIN, #inputfieldHEX, #inputfieldDEC, input:active
+{
+
 }
 .calcButtons
 {
