@@ -12,10 +12,7 @@
          type="text/javascript"
          src="../index/javascript/pagechange.js"
          charset="utf-8"></script>
-      <script
-         type="text/javascript"
-         src="../index/javascript/Calculator.js"
-         charset="utf-8"></script>
+
       <meta charset="utf-8">
       <title>Calculations</title>
    </head>
@@ -46,25 +43,25 @@
             <div id="Calculator" class="tabcolumn">
                <div class="values">
                   <div class="valueoutputBIN">
-                     <output name="resultConversion">placeholder</output>
-                     <div class="valuedec">
+                     <output name="resultConversion" class="convBIN">placeholder</output>
+                     <div  class="valuedec">
                         <p>BIN</p>
                      </div>
                   </div>
                   <div class="valueoutputHEX">
-                     <output name="resultConversion">placeholder</output>
+                     <output name="resultConversion" class="convHEX">placeholder</output>
                      <div class="valuedec">
                         <p>HEX</p>
                      </div>
                   </div>
                   <div class="valueoutputDEC">
-                     <output name="resultConversion">placeholder</output>
+                     <output name="resultConversion" class="convDEC">placeholder</output>
                      <div class="valuedec">
                         <p>DEC</p>
                      </div>
                   </div>
                   <div class="valueoutputOCT">
-                     <output name="resultConversion">placeholder</output>
+                     <output name="resultConversion" class="convOCT">placeholder</output>
                      <div class="valuedec">
                         <p>OCT</p>
                      </div>
@@ -78,7 +75,7 @@
                </div>
                <div class="inputfields">
                <div id="inputfieldBIN" class="calcChange">
-                  <input type="number" name="inputfield" placeholder="INPUT BINARY">
+                  <input type="text" id="inputB" name="inputfield" placeholder="INPUT BINARY"/>
                </div>
                <div id="inputfieldHEX" class="calcChange">
                   <input
@@ -88,12 +85,12 @@
                </div>
                <div id="inputfieldDEC" class="calcChange">
                   <input
-                     type="number"
+                     type="text"
                      name="inputfield"
                      placeholder="INPUT DECIMAL">
                </div>
                <div id="inputfieldOCT" class="calcChange">
-                  <input type="number" name="inputfield" placeholder="INPUT OCTAL">
+                  <input type="text" name="inputfield" placeholder="INPUT OCTAL">
                </div>
                </div>
 
@@ -119,5 +116,9 @@
         <p>Made by Ossi Karjalainen and Eelis Vaara 2018</p>
 
       </div>
+      <script
+         type="text/javascript"
+         src="../index/javascript/Calculator.js"
+         charset="utf-8"></script>
    </body>
 </html>
