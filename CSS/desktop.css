@@ -202,7 +202,7 @@ input:active {}
   padding: 20px;
 }
 
-.RNGcolumn
+#RNGcolumns
 {
   display: flex;
   flex-direction: row;
@@ -222,6 +222,10 @@ input:active {}
   font-size: 20px;
   text-align: center;
   overflow: hidden;
-  padding-left: 10px;
-  padding-right: 10px;
+}
+.RNGcolumn1
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
