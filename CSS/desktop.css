@@ -48,6 +48,7 @@ body {
 
 .topbar button:hover {
   color: white;
+  text-shadow: 4px 3px 5px black;
 }
 
 .topbar button:active {
@@ -228,4 +229,9 @@ input:active {}
   display: flex;
   justify-content: center;
   flex-direction: row;
+}
+.convTABLE
+{
+  width: 100%;
+  border: 1px solid black;
 }
