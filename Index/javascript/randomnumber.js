@@ -1,6 +1,3 @@
-
-
-
 function randomnumber() {
 	var results = [];
 	for (var i = 0; i < 40; i++) {
@@ -25,20 +22,18 @@ function randomnumber() {
 		1
 	);
 
-		var c = document.getElementById("RNGblock1");
-		var xyx = getOccurrence(results, 1);
-		var ctx = c.getContext("2d");
-			ctx.fillStyle = "#FF0000";
-			ctx.fillRect(20, 20, 25, (xyx *25));
+	var c = document.getElementById("RNGblock1");
+	var xyx = getOccurrence(results, 1);
+	var ctx = c.getContext("2d");
+	ctx.fillStyle = "#FF0000";
+	ctx.fillRect(20, 20, 25, (xyx * 25));
 
-	}
-	
-
+}
 
 function reset() {
 
 	if (document.getElementById("RNGcolumn").style.display == "flex") {
-	document.getElementById("RNGcolumn").style.display = "none";
+		document.getElementById("RNGcolumn").style.display = "none";
 
 	} else {
 		{

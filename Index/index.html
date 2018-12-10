@@ -46,25 +46,37 @@
             <div id="Calculator" class="tabcolumn">
                <div class="values">
                   <div class="valueoutputBIN">
-                     <output name="resultConversion" class="convBIN">placeholder</output>
+                     <output
+                        name="resultConversion"
+                        id="convBIN"
+                        onchange="convHEXvalue(this.id, this.value); convBINvalue(this.id, this.value); convDECvalue(this.id, this.value); convOCTvalue(this.id, this.value)"></output>
                      <div class="valuedec">
                         <p>BIN</p>
                      </div>
                   </div>
                   <div class="valueoutputHEX">
-                     <output name="resultConversion" class="convHEX">placeholder</output>
+                     <output
+                        name="resultConversion"
+                        id="convHEX"
+                        onchange="convHEXvalue(this.id, this.value); convBINvalue(this.id, this.value); convDECvalue(this.id, this.value); convOCTvalue(this.id, this.value)"></output>
                      <div class="valuedec">
                         <p>HEX</p>
                      </div>
                   </div>
                   <div class="valueoutputDEC">
-                     <output name="resultConversion" class="convDEC">placeholder</output>
+                     <output
+                        name="resultConversion"
+                        id="convDEC"
+                        onchange="convHEXvalue(this.id, this.value); convBINvalue(this.id, this.value); convDECvalue(this.id, this.value); convOCTvalue(this.id, this.value)"></output>
                      <div class="valuedec">
                         <p>DEC</p>
                      </div>
                   </div>
                   <div class="valueoutputOCT">
-                     <output name="resultConversion" class="convOCT">placeholder</output>
+                     <output
+                        name="resultConversion"
+                        id="convOCT"
+                        onchange="convHEXvalue(this.id, this.value); convBINvalue(this.id, this.value); convDECvalue(this.id, this.value); convOCTvalue(this.id, this.value)"></output>
                      <div class="valuedec">
                         <p>OCT</p>
                      </div>
@@ -87,6 +99,9 @@
                <div class="inputfields">
                   <div id="inputfieldBIN" class="calcChange">
                      <input
+                        oninput="convBINvalue(this.id, this.value)"
+                        onfocus="this.value=''"
+                        onkeypress="return inputBcheck(event,value)"
                         type="text"
                         id="inputB"
                         name="inputfield"
@@ -94,18 +109,30 @@
                   </div>
                   <div id="inputfieldHEX" class="calcChange">
                      <input
+                        oninput="convHEXvalue(this.id, this.value)"
+                        onfocus="this.value=''"
+                        onkeypress="return inputHcheck(event,value)"
                         type="text"
+                        id="inputH"
                         name="inputfield"
                         placeholder="INPUT HEXADECIMAL">
                   </div>
                   <div id="inputfieldDEC" class="calcChange">
                      <input
+                        oninput="convDECvalue(this.id, this.value)"
+                        onfocus="this.value=''"
+                        onkeypress="return inputDcheck(event,value)"
                         type="text"
+                        id="inputD"
                         name="inputfield"
                         placeholder="INPUT DECIMAL">
                   </div>
                   <div id="inputfieldOCT" class="calcChange">
                      <input
+                        oninput="convOCTvalue(this.id, this.value)"
+                        onfocus="this.value=''"
+                        onkeypress="return inputOcheck(event,value)"
+                        id="inputO"
                         type="text"
                         name="inputfield"
                         placeholder="INPUT OCTAL">
