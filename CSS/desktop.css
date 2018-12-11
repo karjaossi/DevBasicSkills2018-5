@@ -62,11 +62,13 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  min-height: 700px;
+  min-height: 500px;
   height: auto;
   background-color: #dedede;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
   border: 2px solid #db0303;
   padding-bottom: 35px;
 }
