@@ -16,6 +16,10 @@
          type="text/javascript"
          src="../index/javascript/randomnumber.js"
          charset="utf-8"></script>
+      <script
+         type="text/javascript"
+         src="../index/javascript/generatetables.js"
+         charset="utf-8"></script>
       <meta charset="utf-8">
       <title>Calculations</title>
    </head>
@@ -140,31 +144,22 @@
                </div>
             </div>
             <div id="ConTable" class="tabcolumn">
-               <h1>HERE CONVERSION TABLE</h1>
-                <table class="convTABLE">
+               <div class="conversionTableColumn">
+                  <h1>Conversion table</h1>
+                  <div>
+                    <p>With this tool you can generate a very basic conversion table</p>
+                  </div>
 
-                  <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                  </tr>
-                  <tr>
-
-                  </tr>
-                  <tr>
-
-                  </tr>
+               </div>
+               <div class="conversionTableButtons">
+                  <button id="conversionTableButtons" onclick="conversionTableMake();">Generate Table</button>
+                  <button id="conversionTableButtons" onclick="conversionTableClear();">Clear Table</button>
+               </div>
+               <table id="conversionTable">
                   <tr>
 
                   </tr>
-
-                </table>
-
-
-
-
-
+               </table>
             </div>
             <div id="Combinations" class="tabcolumn">
                <h1>HERE COMES COMBINATIONS</h1>
@@ -179,31 +174,61 @@
                   </button>
                </div>
                <div id="RNGcolumns">
-                  <div id="RNGoutput1"></div>
-                  <canvas id="RNGblock1" width="50" height="400">
-                     <div>
-                        <canvas id="RNGoutput2" width="150" height="150"></div>
-                        <div id="RNGoutput3"></div>
-                        <div id="RNGoutput4"></div>
-                        <div id="RNGoutput5"></div>
-                        <div id="RNGoutput6"></div>
-                        <div id="RNGoutput7"></div>
-                        <div id="RNGoutput8"></div>
-                        <div id="RNGoutput9"></div>
-                        <div id="RNGoutput10"></div>
-                     </div>
-                  </div>
-                  <div id="Optional" class="tabcolumn">
-                     <h1>HERE COMES OR NOT OPTIONAL</h1>
-                  </div>
+                  <table>
+                     <tr>
+                        <td>1</td>
+                        <td id="RNGoutput1"></td>
+                     </tr>
+                     <tr>
+                        <td>2</td>
+                        <td id="RNGoutput2"></td>
+                     </tr>
+                     <tr>
+                        <td>3</td>
+                        <td id="RNGoutput3"></td>
+                     </tr>
+                     <tr>
+                        <td>4</td>
+                        <td id="RNGoutput4"></td>
+                     </tr>
+                     <tr>
+                        <td>5</td>
+                        <td id="RNGoutput5"></td>
+                     </tr>
+                     <tr>
+                        <td>6</td>
+                        <td id="RNGoutput6"></td>
+                     </tr>
+                     <tr>
+                        <td>7</td>
+                        <td id="RNGoutput7"></td>
+                     </tr>
+                     <tr>
+                        <td>8</td>
+                        <td id="RNGoutput8"></td>
+                     </tr>
+                     <tr>
+                        <td>9</td>
+                        <td id="RNGoutput9"></td>
+                     </tr>
+                     <tr>
+                        <td>10</td>
+                        <td id="RNGoutput10"></td>
+                     </tr>
+                  </table>
                </div>
             </div>
-            <div class="footer">
-               <p>Made by Ossi Karjalainen 2018</p>
+            <div id="Optional" class="tabcolumn">
+               <h1>HERE COMES OR NOT OPTIONAL</h1>
             </div>
-            <script
-               type="text/javascript"
-               src="../index/javascript/Calculator.js"
-               charset="utf-8"></script>
-         </body>
-      </html>
+         </div>
+      </div>
+      <div class="footer">
+         <p>Made by Ossi Karjalainen 2018</p>
+      </div>
+      <script
+         type="text/javascript"
+         src="../index/javascript/Calculator.js"
+         charset="utf-8"></script>
+   </body>
+</html>

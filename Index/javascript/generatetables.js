@@ -1,13 +1,34 @@
-function generate_table()
-{
-  var table_element = document.getElementById("table_id");
-  var table_content = "<tr><th>A</th><th>B</th><th>Result</th></tr>";
-  var multiplicant = 3;
-  for (var i = i; i<=10; i ++)
-  {
-    var result = i + multiplicant ;
-    table_content += "<tr><td>" + i + "</td><td>" + multiplicant + "</td><td>" + result + "</td></tr>";
-  }
-  table_element.innerHTML = table_content
+function conversionTableClear() {
+  var table_element = document.getElementById(
+		"conversionTable"
+	);
+
+	var table_content = "<tr><th>Table is now empty</th></tr>";
+
+
+	table_element.innerHTML = table_content;
+
 }
- // body onload="generate_table()" table id=table_id class=centered
+
+function conversionTableMake() {
+	var table_element = document.getElementById(
+		"conversionTable"
+	);
+
+	var table_content = "<tr><th>Decimal</th><th>Binary</th><th>Octal</th><th>Hexad" +
+			"ecimal</th></tr>";
+
+	var i = 0;
+
+	for (let i = 0; i < 51; i++) {
+		var hex = i.toString(16).toUpperCase(); // Hexidecimal
+		var oct = i.toString(8); // Octal
+		var bin = i.toString(2); // Binary
+
+		table_content += "<tr><td>" + i + "</td><td>" + bin + "</td><td>" + oct + "<" +
+				"/td><td>" + hex + "</td></tr>";
+	}
+
+	table_element.innerHTML = table_content;
+
+}
