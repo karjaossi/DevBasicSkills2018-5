@@ -71,6 +71,7 @@ body {
   border-bottom-right-radius: 50px;
   border: 2px solid #db0303;
   padding-bottom: 35px;
+  overflow: auto;
 }
 
 .tabcolumn {
@@ -101,6 +102,14 @@ body {
   }
 }
 
+.ConvTool
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 .valueoutputBIN,
 .valueoutputDEC,
 .valueoutputHEX,
@@ -121,6 +130,7 @@ body {
   width: auto;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   padding-top: 30px;
@@ -232,10 +242,28 @@ input:active {}
   padding-left: 3px;
 }
 
-.RNGcolumn1 {
+#RNGcolumns {
   display: flex;
+  font-size: 20px;
+  padding-right: 20px;
   justify-content: center;
   flex-direction: row;
+  text-align: center;
+}
+#RNGcolumns th
+{
+  padding-right: 5px;
+}
+.RNGdesc
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.RNGdesc p
+{
+  font-size: 20px;
 }
 .conversionTableColumn
 {
@@ -275,4 +303,16 @@ input:active {}
   text-align: center;
   width: auto;
   border: 1px solid black;
+}
+
+.Combinations
+{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column
+}
+.CombinaChange
+{
+  display: none;
 }

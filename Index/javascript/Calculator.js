@@ -1,5 +1,5 @@
-// This small piece of JavaScript will take user input and
-// convert it to Hex,Dec,Bin and Oct values.
+// This javascript file has both user input check that only correct charcters can be typed into the input inputfield
+// and also it has the function to convert the input to all four Hexadecimal,Decimal,Octal and Binary
 
 function inputBcheck(b, value) {
 	var unicode = b.charCode
@@ -99,18 +99,3 @@ function convOCTvalue(source, valNum) {
 	outputHEX.value = (parseInt(valNum, 8).toString(16).toUpperCase());
 
 }
-
-/*function checkLength()
-{
-    var fieldLength = document.getElementById('txtF').value.length;
-    //Suppose u want 4 number of character
-    if(fieldLength <= 4){
-        return true;
-    }
-    else
-    {
-        var str = document.getElementById('txtF').value;
-        str = str.substring(0, str.length - 1);
-        document.getElementById('txtF').value = str;
-    }
-}*/
