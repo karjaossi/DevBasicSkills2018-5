@@ -316,3 +316,35 @@ input:active {}
 {
   display: none;
 }
+.CombinaButtons {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  margin-top: 15px;
+}
+
+.CombinaButtons button {
+  background: none;
+  color: #211513;
+  border: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 18px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-family: inherit;
+  cursor: pointer;
+  outline: inherit;
+  overflow: hidden;
+  border-radius: 20px;
+  text-shadow: 2px 2px 3px #dedede;
+}
+
+.CombinaButtons button:hover {
+  color: #dedede;
+  text-shadow: 1px 1px 5px black;
+}
+
+.CombinaButtons button:active {
+  color: #211513;
+}

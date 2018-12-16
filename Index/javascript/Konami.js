@@ -29,7 +29,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 function activateCheats() {
-/*  document.body.style.background = "background-color', '#FFA8A8";*/
+  document.body.style.background = "#FFA8A8";
 
-  alert("cheats activated");
+  alert("You've typed in the Konamicode which will activate a different styling for the page. To reset this styling reload the page.");
 }

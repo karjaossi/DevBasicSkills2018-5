@@ -21,9 +21,9 @@ function conversionTableMake() {
 	var i = 0;
 
 	for (let i = 0; i < 51; i++) {
-		var hex = i.toString(16).toUpperCase(); // Hexidecimal
-		var oct = i.toString(8); // Octal
-		var bin = i.toString(2); // Binary
+		var hex = i.toString(16).toUpperCase();
+		var oct = i.toString(8);
+		var bin = i.toString(2);
 
 		table_content += "<tr><td>" + i + "</td><td>" + bin + "</td><td>" + oct + "<" +
 				"/td><td>" + hex + "</td></tr>";

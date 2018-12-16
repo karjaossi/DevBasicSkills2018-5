@@ -17,6 +17,14 @@
          charset="utf-8"></script>
       <script
          type="text/javascript"
+         src="../index/javascript/Combinatorics.js"
+         charset="utf-8"></script>
+      <script
+         type="text/javascript"
+         src="../index/javascript/TruthTables.js"
+         charset="utf-8"></script>
+      <script
+         type="text/javascript"
          src="../index/javascript/Konami.js"
          charset="utf-8"></script>
       <meta charset="utf-8">
@@ -32,7 +40,7 @@
          <button class="tablink" onclick="openSite(event, 'Combinatorics')">Combinatorics</button>
          <button class="tablink" onclick="openSite(event, 'TruthTables')">Truth Tables</button>
          <button class="tablink" onclick="openSite(event, 'RNG')">Random Values</button>
-         <button class="tablink" onclick="openSite(event, 'Optional')">Optional</button>
+         <button class="tablink" onclick="openSite(event, 'Insuline Calculator')">Insuline Calculator</button>
       </div>
       <div class="container">
          <div class="column">
@@ -150,36 +158,74 @@
                <div class="Combinations">
                   <div class="Combdesc">
                      <h1>Combinatorics</h1>
+                     <div id="CombinaList" class="CombinaButtons">
+                        <button class="CombinaSelect" onclick="CombinatoricsList(event, 'CombInputs')">Combinations</button>
+                        <button class="CombinaSelect" onclick="CombinatoricsList(event, 'PermuInputs')">Permutations</button>
+                     </div>
                   </div>
                   <div id="CombinatoricsResults">
                      <output></output>
                   </div>
-                  <div id="CombinaList">
-                     <button
-                        value="Combinations"
-                        class="CombinaSelect"
-                        onclick="CombinatoricsList(event, 'CombInputs')">Combinations</button>
-                     <button
-                        value="Permutations"
-                        class="CombinaSelect"
-                        onclick="CombinatoricsList(event, 'PermuInputs')">Permutations</button>
-                  </div>
                   <div id="CombInputs" class="CombinaChange">
+                     <h1>Combinations</h1>
                      <div class="CombNset">
-                        <input type="number" id="CombNset" placeholder="(n)">
+                        <input
+                           type="number"
+                           id="CombNset"
+                           placeholder="(n)"
+                           style="width:100px;"
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           maxlength="3">
                      </div>
-                     <br>
+                     <h2>C</h2>
                      <div class="CombRset">
-                        <input type="number" id="CombRset" placeholder="(r)">
+                        <input
+                           type="number"
+                           id="CombRset"
+                           placeholder="(r)"
+                           style="width:100px;"
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           maxlength="3">
+                     </div>
+                     <div class="CombOutput">
+                        <button type="button" onclick="combinations();">Output the Result</button>
+                        <output name="result" id="CombResult"></output>
                      </div>
                   </div>
                   <div id="PermuInputs" class="CombinaChange">
-                     <input type="number" id="PermInput" placeholder="test">
+                     <div>
+                        <h1>Permutations</h1>
+                     </div>
+                     <div class="PermNset">
+                        <input
+                           type="number"
+                           id="PermNset"
+                           placeholder="(n)"
+                           style="width:100px;"
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           maxlength="3"></div>
+                     <h2>C</h2>
+                     <div class="PermRset">
+                        <input
+                           type="number"
+                           id="PermRset"
+                           placeholder="(r)"
+                           style="width:100px;"
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           maxlength="3"></div>
+                     <div class="PermOutput">
+                        <button type="button" onclick="permutations();">Output the Result</button>
+                        <input type="checkbox" id="SamplingSwitch">
+                        <p>Sampling with replacement is on if selected and off if not selected</p>
+                        <output name="result" id="PermResult"></output>
+                     </div>
                   </div>
                </div>
             </div>
             <div id="TruthTables" class="tabcolumn">
                <h1>Truth Tables</h1>
+               <button type="button" name="button" onclick="truthtablejs();">Clickclack</button>
+               <table id="truthtable"></table>
             </div>
             <div id="RNG" class="tabcolumn">
                <div class="RNGdesc">
@@ -242,8 +288,28 @@
                   </table>
                </div>
             </div>
-            <div id="Optional" class="tabcolumn">
-               <h1>HERE COMES OR NOT OPTIONAL</h1>
+            <div id="Insuline Calculator" class="tabcolumn">
+               <div style="text-align:center;justify-content:center;">
+                  <h1>Insuline calculator</h1>
+                  <p>This tool is for diabetics that use Novolog or Novorapid as fast-acting insuline</p>
+                  <br>
+                  <p>
+                     <b>You should use this with caution!</b>
+                     <br>
+                     All of the values are just rough estimates.</p>
+                  <div class="bloodsugar">
+                     <input type="number" id="bloodsugar" placeholder="(mmol/L)">
+                  </div>
+                  <div class="InsulineUnits">
+                     <input type="number" id="InsulineUnits" step="0.5" placeholder="Units per 10g">
+                  </div>
+                  <div class="Carbs">
+                     <input type="number" id="Carbs" placeholder="Carbs">
+                  </div>
+                  <div class="InsulineButton">
+                    <button type="button">Calculate</button>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
