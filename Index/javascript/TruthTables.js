@@ -20,17 +20,3 @@ function truthtablejs() {
   }
   document.getElementById("truthtable").innerHTML = truthtables;
 }
-
-function test() {
-
-
-  var row = [],
-    values = ["a", "b", "c"]
-
-  for (var i = (Math.pow(2, values.length) - 1); i >= 0; i--) {
-    for (var j = (values.length - 1); j >= 0; j--) {
-      row[j] = (i & Math.pow(2, j)) ? true : false
-    }
-    document.getElementById("truthtable").innerHTML=row;
-  }
-}

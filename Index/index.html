@@ -25,6 +25,10 @@
          charset="utf-8"></script>
       <script
          type="text/javascript"
+         src="../index/javascript/Insuline.js"
+         charset="utf-8"></script>
+      <script
+         type="text/javascript"
          src="../index/javascript/Konami.js"
          charset="utf-8"></script>
       <meta charset="utf-8">
@@ -155,7 +159,9 @@
                </table>
             </div>
             <div id="Combinatorics" class="tabcolumn">
-               <div class="Combinations">
+               <div
+                  class="Combinations"
+                  style="display:flex; justify-content:center;text-align:center;flex-direction:column;">
                   <div class="Combdesc">
                      <h1>Combinatorics</h1>
                      <div id="CombinaList" class="CombinaButtons">
@@ -167,65 +173,75 @@
                      <output></output>
                   </div>
                   <div id="CombInputs" class="CombinaChange">
-                     <h1>Combinations</h1>
-                     <div class="CombNset">
-                        <input
-                           type="number"
-                           id="CombNset"
-                           placeholder="(n)"
-                           style="width:100px;"
-                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                           maxlength="3">
-                     </div>
-                     <h2>C</h2>
-                     <div class="CombRset">
-                        <input
-                           type="number"
-                           id="CombRset"
-                           placeholder="(r)"
-                           style="width:100px;"
-                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                           maxlength="3">
-                     </div>
-                     <div class="CombOutput">
-                        <button type="button" onclick="combinations();">Output the Result</button>
-                        <output name="result" id="CombResult"></output>
+                     <div style="margin-left:auto;margin-right:auto;">
+                        <h1>Combinations</h1>
+                        <br>
+                        <p>nCr</p>
+                        <div class="CombNset">
+                           <input
+                              type="number"
+                              id="CombNset"
+                              placeholder="(n)"
+                              style="width:100px;"
+                              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                              maxlength="3">
+                           <input
+                              type="number"
+                              id="CombRset"
+                              placeholder="(r)"
+                              style="width:100px;"
+                              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                              maxlength="3">
+                        </div>
+                        <div class="CombOutput" style="font-size:25px;">
+                           <button type="button" onclick="combinations();">Output the Result</button>
+                           <output name="result" id="CombResult"></output>
+                        </div>
                      </div>
                   </div>
                   <div id="PermuInputs" class="CombinaChange">
-                     <div>
-                        <h1>Permutations</h1>
-                     </div>
-                     <div class="PermNset">
-                        <input
-                           type="number"
-                           id="PermNset"
-                           placeholder="(n)"
-                           style="width:100px;"
-                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                           maxlength="3"></div>
-                     <h2>C</h2>
-                     <div class="PermRset">
-                        <input
-                           type="number"
-                           id="PermRset"
-                           placeholder="(r)"
-                           style="width:100px;"
-                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                           maxlength="3"></div>
-                     <div class="PermOutput">
-                        <button type="button" onclick="permutations();">Output the Result</button>
-                        <input type="checkbox" id="SamplingSwitch">
-                        <p>Sampling with replacement is on if selected and off if not selected</p>
-                        <output name="result" id="PermResult"></output>
+                     <div
+                        class="permutations123"
+                        style="display:flex; justify-content:center;text-align:center;flex-direction:column;">
+                        <div>
+                           <h1>Permutations</h1>
+                           <p>The number of ways to choose a sample of r elements from a set of n distinct
+                              objects where order does matter and replacements are not allowed.<br> When n = r
+                              this reduces to n!, a simple factorial of n.</p>
+                        </div>
+                        <div class="PermNset" style="margin-left:auto;margin-right:auto;">
+                           <input
+                              type="number"
+                              id="PermNset"
+                              placeholder="(n)"
+                              style="width:100px;"
+                              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                              maxlength="3">
+                           <input
+                              type="number"
+                              id="PermRset"
+                              placeholder="(r)"
+                              style="width:100px;"
+                              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                              maxlength="3"></div>
+                        <br>
+                        <div class="PermOutput" style="margin-left:auto;margin-right:auto;">
+                           <button type="button" onclick="permutations();">Output the Result</button>
+                           <br><br>
+                           <input type="checkbox" id="SamplingSwitch">
+                           <p>Sampling with replacement is on if selected and off if not selected</p>
+                           <output name="result" id="PermResult" style="font-size:25px;"></output>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
             <div id="TruthTables" class="tabcolumn">
-               <h1>Truth Tables</h1>
-               <button type="button" name="button" onclick="truthtablejs();">Clickclack</button>
-               <table id="truthtable"></table>
+               <div style="text-align:center;justify-content:center;">
+                  <h1>Truth Tables</h1>
+                  <button type="button" name="button" onclick="truthtablejs();">Clickclack</button>
+                  <table id="truthtable"></table>
+               </div>
             </div>
             <div id="RNG" class="tabcolumn">
                <div class="RNGdesc">
@@ -235,8 +251,8 @@
                      how many times it was generated in the loop.</p>
                </div>
                <div class="RNGButton">
-                  <button type="button" onclick="randomnumber();">
-                     Random Numbers
+                  <button id="RNGButton" type="button" onclick="randomnumber();">
+                     Generate Random Numbers
                   </button>
                </div>
                <div id="RNGcolumns">
@@ -298,16 +314,25 @@
                      <br>
                      All of the values are just rough estimates.</p>
                   <div class="bloodsugar">
+                     <p>Your current blood sugar is?</p>
                      <input type="number" id="bloodsugar" placeholder="(mmol/L)">
                   </div>
                   <div class="InsulineUnits">
+                     <p>How many units do you have to inject per 10g of carbohydrates</p>
                      <input type="number" id="InsulineUnits" step="0.5" placeholder="Units per 10g">
                   </div>
                   <div class="Carbs">
+                     <p>Did you eat carbohydrates? If so how much?</p>
                      <input type="number" id="Carbs" placeholder="Carbs">
                   </div>
-                  <div class="InsulineButton">
-                    <button type="button">Calculate</button>
+                  <div class="InsulineButton" onclick="InsulineCalc();">
+                     <button type="button">Calculate</button>
+                  </div>
+                  <div class="InsulineOutput">
+                     <output id="InsulineOutput"></output>
+                  </div>
+                  <div class="BloodSugarEstimate">
+                     <output id="BloodSugarEstimate"></output>
                   </div>
                </div>
             </div>
