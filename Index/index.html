@@ -34,11 +34,12 @@
       <meta charset="utf-8">
       <title>Calculations</title>
    </head>
-   <body>
+   <body onload="openSite(event, 'Home')">
       <div class="header">
-         <h2>Simple Mathematical tools</h2>
+         <h2>Simple Mathematical Tools</h2>
       </div>
       <div class="topbar">
+         <button class="tablink" onclick="openSite(event, 'Home')" style="display:none;"></button>
          <button class="tablink" onclick="openSite(event, 'Calculator')">Conversion tool</button>
          <button class="tablink" onclick="openSite(event, 'ConTable')">Conversion Table</button>
          <button class="tablink" onclick="openSite(event, 'Combinatorics')">Combinatorics</button>
@@ -48,6 +49,18 @@
       </div>
       <div class="container">
          <div class="column">
+            <div
+               id="Home"
+               class="tabcolumn"
+               style="justify-content:center;text-align:center;">
+               <br><br><br><br>
+               <h1>Welcome!</h1>
+               <p style="font-size: 25px;">This website contains 6 different mathematical tools.
+                  <br>
+                  You can select the wanted tool from the top part of the website.
+               </p><br><br><br><br><br><br><br><br><br><br><br><br>
+               <p style="font-size: 17px;">Website was created in December 2018</p>
+            </div>
             <div id="Calculator" class="tabcolumn">
                <div class="ConvTool">
                   <h1>Conversion tool</h1>
@@ -175,8 +188,7 @@
                   <div id="CombInputs" class="CombinaChange">
                      <div style="margin-left:auto;margin-right:auto;">
                         <h1>Combinations</h1>
-                        <br>
-                        <p>nCr</p>
+                        <p style="font-size:25px;">nCr</p>
                         <div class="CombNset">
                            <input
                               type="number"
@@ -194,7 +206,7 @@
                               maxlength="3">
                         </div>
                         <div class="CombOutput" style="font-size:25px;">
-                           <button type="button" onclick="combinations();">Output the Result</button>
+                           <button type="button" id="buttoncomb" onclick="combinations();">Output the Result</button>
                            <output name="result" id="CombResult"></output>
                         </div>
                      </div>
@@ -205,9 +217,7 @@
                         style="display:flex; justify-content:center;text-align:center;flex-direction:column;">
                         <div>
                            <h1>Permutations</h1>
-                           <p>The number of ways to choose a sample of r elements from a set of n distinct
-                              objects where order does matter and replacements are not allowed.<br> When n = r
-                              this reduces to n!, a simple factorial of n.</p>
+                           <p style="font-size:25px;">nPr</p>
                         </div>
                         <div class="PermNset" style="margin-left:auto;margin-right:auto;">
                            <input
@@ -226,7 +236,7 @@
                               maxlength="3"></div>
                         <br>
                         <div class="PermOutput" style="margin-left:auto;margin-right:auto;">
-                           <button type="button" onclick="permutations();">Output the Result</button>
+                           <button type="button" id="buttoncomb" onclick="permutations();">Output the Result</button>
                            <br><br>
                            <input type="checkbox" id="SamplingSwitch">
                            <p>Sampling with replacement is on if selected and off if not selected</p>
@@ -239,8 +249,14 @@
             <div id="TruthTables" class="tabcolumn">
                <div style="text-align:center;justify-content:center;">
                   <h1>Truth Tables</h1>
-                  <button type="button" name="button" onclick="truthtablejs();">Clickclack</button>
-                  <table id="truthtable"></table>
+                  <button
+                     type="button"
+                     name="button"
+                     onclick="truthtablejs();"
+                     style="background:none; border:none; font-size:20px; margin-bottom: 20px;">Generate the truth table</button>
+                  <table
+                     id="truthtable"
+                     style="display:flex; justify-content: center; text-align:center; font-size:20px;"></table>
                </div>
             </div>
             <div id="RNG" class="tabcolumn">
@@ -314,16 +330,35 @@
                      <br>
                      All of the values are just rough estimates.</p>
                   <div class="bloodsugar">
-                     <p>Your current blood sugar is?</p>
-                     <input type="number" id="bloodsugar" placeholder="(mmol/L)">
+                     <p style="font-size:25px;">Your current blood sugar is?</p>
+                     <input
+                        type="number"
+                        id="bloodsugar"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="2"
+                        min="0"
+                        placeholder="(mmol/L)">
                   </div>
                   <div class="InsulineUnits">
-                     <p>How many units do you have to inject per 10g of carbohydrates</p>
-                     <input type="number" id="InsulineUnits" step="0.5" placeholder="Units per 10g">
+                     <p style="font-size:25px;">How many units do you have to inject per 10g of carbohydrates</p>
+                     <input
+                        type="number"
+                        id="InsulineUnits"
+                        step="0.5"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="1"
+                        min="0"
+                        placeholder="Units per 10g">
                   </div>
                   <div class="Carbs">
-                     <p>Did you eat carbohydrates? If so how much?</p>
-                     <input type="number" id="Carbs" placeholder="Carbs">
+                     <p style="font-size:25px;">Did you eat carbohydrates? If so how much?</p>
+                     <input
+                        type="number"
+                        id="Carbs"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="4"
+                        min="0"
+                        placeholder="Carbs">
                   </div>
                   <div class="InsulineButton" onclick="InsulineCalc();">
                      <button type="button">Calculate</button>

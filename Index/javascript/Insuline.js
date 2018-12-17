@@ -7,24 +7,22 @@ function InsulineCalc() {
   var carbs = Math.floor(carbs_raw / 10)
   var wanted = Math.floor(Math.random() * (7.5 - 6.5 + 1)) + 6.5;
   var result = 0;
-  console.log(carbs);
 
 
-  if (sugar == 0 || units == 0 && carbs == 0) {
+  if (sugar <= 0 && units >= 0 || units <= 0 && carbs <= 0) {
     document.getElementById("InsulineOutput").innerHTML = " <h2> There can't be results if you won't give me proper values.</h2> <p>You have to at least input your blood sugar</p>";
-  } else {
+  }
+   else {
     if (sugar <= 5 && carbs == 0) {
-      result = Math.floor(((sugar - wanted) + carbs) * units);
-      document.getElementById("BloodSugarEstimate").innerHTML = wanted;
-      document.getElementById("InsulineOutput").innerHTML = " <p>You should inject: </p><br>" + result + "<br><p> units to maintain a healthy bloodsugar balance.</p>";
+      result = Math.floor((8 - sugar)*10);
+      document.getElementById("BloodSugarEstimate").innerHTML = "<p> In two hours your bloodsugar level should be on a healthy level. <br> Please measurme your bloodsugar every 10 minutes.";
+      document.getElementById("InsulineOutput").innerHTML = " <p>You should eat at least: </p><br>" + result + "<br><p>grams of carbs to maintain a healthy bloodsugar balance.</p>";
       console.log(result);
     } else if (sugar > 5) {
       result = Math.floor(((sugar - wanted) + carbs) * units);
       document.getElementById("BloodSugarEstimate").innerHTML = "<p>Your blood sugar in 2 hours will be roughly: </p>" + wanted;
       document.getElementById("InsulineOutput").innerHTML = " <p>You should inject: </p><br>" + result + "<br><p> units to maintain a healthy bloodsugar balance.</p>";
       console.log(result);
-    } else if (sugar <= 5 && carbs <= 0 || isNaN(carbs) == true) {
-      document.getElementById("BloodSugarEstimate").innerHTML = "YOU SHOULD EAT";
     }
   }
 }
