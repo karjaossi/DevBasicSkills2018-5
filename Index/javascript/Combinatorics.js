@@ -7,7 +7,6 @@ function combinations() {
   console.log(f);
 
   if (isNaN(result) == false || N <= 0 || R <= 0 || R > N) {
-    console.log("test");
     document.getElementById("CombResult").innerHTML = "<br>Check your inputs <br> N value cannot be smaller than R <br> and it cannot be 0 or a negative value";
 
   } else {
